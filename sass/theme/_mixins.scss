@@ -1,0 +1,18 @@
+@mixin link($color) {
+  color: $color;
+  &:hover {
+    color: darken($color, 10%);
+  }
+}
+
+@mixin heading() {
+
+}
+
+@mixin subheading() {
+  
+}
+
+@mixin paragraph() {
+  
+}

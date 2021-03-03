@@ -1,0 +1,15 @@
+input {
+  @include appearence();
+}
+
+textarea {
+  @include appearence();
+}
+
+select {
+  @include appearence();
+}
+
+button {
+  @include appearence();
+}

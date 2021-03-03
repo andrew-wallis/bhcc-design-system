@@ -1,0 +1,85 @@
+html {
+  font-size: 100%;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+p {
+  @include rem(margin, $slug, 0);
+}
+
+a {
+  
+}
+
+ul {
+  @include rem(margin, $slug, 0);
+}
+
+ol {
+  @include rem(margin, $slug, 0);
+  @include rem(padding-left, $gutter * 2);
+}
+
+li {
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+
+}
+
+blockquote {
+  @include rem(margin, $slug * 2);
+}
+
+figcaption {
+
+}
+
+*:focus {
+
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */

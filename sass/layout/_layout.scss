@@ -1,0 +1,5 @@
+.wrapper {
+  @include rem(max-width, $wrapper-width);
+  margin: 0px auto;
+  @include rem(padding, 0, 20);
+}

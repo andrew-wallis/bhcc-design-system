@@ -1,0 +1,132 @@
+header {
+  @include rem(padding-right, 40 + $gutter);
+}
+
+.responsive-menu {
+  @media only screen and (max-width: $screen-sm-max){
+    display: none;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 120;
+    @include rem(padding, 40 + $slug, 40 + $gutter, $slug, $gutter);
+    background-color: white;
+  }
+  @media only screen and (min-width: $screen-sm-max){
+    display: block !important;
+  }
+}
+
+.responsive-menu nav {
+  @include rem(margin-bottom, $slug * 2);
+  @media only screen and (min-width: $screen-md-min){
+    @include rem(margin-bottom, $slug);
+  }
+}
+
+.responsive-menu ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.responsive-menu li {
+  @media only screen and (min-width: $screen-md-min){
+    display: inline-block;
+  }
+}
+
+.responsive-menu a {
+  @include rem(margin-left, $gutter / 2);
+  @media only screen and (max-width: $screen-sm-max){
+    display: block;
+  }
+}
+
+
+.responsive-menu--icon {
+  position: absolute;
+  z-index: 150;
+  @include rem(top, 20);
+  @include rem(right, 20);
+  @include rem(height, 40);
+  @include rem(width, 40);
+  padding: 0px;
+  border: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  background-color: transparent;
+  @media only screen and (min-width: $screen-md-min){
+    display: none;
+  }
+}
+
+.responsive-menu--icon span {
+  display: block;
+  position: absolute;
+  @include rem(height, 1);
+  width: 100%;
+  background: black;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.responsive-menu--icon span:nth-child(1) {
+  @include rem(top, 6);
+}
+
+.responsive-menu--icon span:nth-child(2),
+.responsive-menu--icon span:nth-child(3) {
+  @include rem(top, 19);
+}
+
+.responsive-menu--icon span:nth-child(4) {
+  @include rem(top, 32);
+}
+
+.responsive-menu--icon.open {
+  position: fixed;
+}
+
+.responsive-menu--icon.open span:nth-child(1) {
+  @include rem(top, 19);
+  width: 0%;
+  left: 50%;
+}
+
+.responsive-menu--icon.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.responsive-menu--icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.responsive-menu--icon.open span:nth-child(4) {
+  @include rem(top, 19);
+  width: 0%;
+  left: 50%;
+}

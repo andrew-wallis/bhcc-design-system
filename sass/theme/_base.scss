@@ -1,0 +1,66 @@
+body {
+  background-color: $color-back;
+  font-family: $font-body;
+  @include rem(font-size, 16);
+  color: $color-text;
+}
+
+h1 {
+  @include heading();
+}
+
+h2 {
+  @include heading();
+}
+
+h3 {
+  @include heading();
+}
+
+h4 {
+  @include heading();
+}
+
+h5 {
+  @include heading();
+}
+
+h6 {
+  @include heading();
+}
+
+p {
+  @include paragraph();
+}
+
+a {
+  @include link($color-accent);
+}
+
+ul {
+
+}
+
+ol {
+
+}
+
+li {
+
+}
+
+figure {
+
+}
+
+blockquote {
+
+}
+
+figcaption {
+  
+}
+
+*:focus {
+  outline: 1px dotted $color-accent;
+}
